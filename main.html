@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  </head>
+  <body>
+    <div class="overview">
+      <header class="header">
+        <div class="icon-breadcrumb">
+          <div class="div">
+            <div class="button">
+              <div class="img-wrapper"><img class="img" src="img/Sun-Icon.png" /></div>
+              <div class="tooltip">
+                <div class="div">
+                  <div class="text">Sidebar</div>
+                  <div class="text-wrapper">⌘S</div>
+                </div>
+              </div>
+            </div>
+            <div class="button">
+              <div class="img-wrapper"><img class="img" src="img/star.svg" /></div>
+              <div class="div-wrapper">
+                <div class="div">
+                  <div class="text">Favorites</div>
+                  <div class="text-wrapper">⌘F</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="div">
+            <button class="button-2">
+              <div class="text-2"><div class="text-3">Dashboards</div></div>
+            </button>
+            <div class="text-2"><div class="text-4">/</div></div>
+            <button class="button-2">
+              <div class="text-2"><div class="text-5">Test Bed</div></div>
+            </button>
+          </div>
+        </div>
+        <div class="frame">
+          <div class="search">
+            <div class="icon-text">
+              <div class="icon-set"><img class="img-2" src="img/search.svg" /></div>
+              <div class="text-6"><div class="text-4">Search</div></div>
+            </div>
+            <div class="text-2"><div class="text-4">⌘/</div></div>
+          </div>
+          <div class="div">
+            <div class="button">
+              <div class="img-wrapper"><img class="img" src="img/sun.svg" /></div>
+              <div class="tooltip-2">
+                <div class="div">
+                  <div class="text">Toggle theme</div>
+                  <div class="text-wrapper">⌘T</div>
+                </div>
+              </div>
+            </div>
+            <div class="button">
+              <div class="img-wrapper"><img class="img" src="img/clock-counter-clockwise.svg" /></div>
+              <div class="div-wrapper">
+                <div class="div">
+                  <div class="text">Activities</div>
+                  <div class="text-wrapper">⌘A</div>
+                </div>
+              </div>
+            </div>
+            <div class="button">
+              <div class="img-wrapper"><img class="img" src="img/bell.svg" /></div>
+              <div class="tooltip-3">
+                <div class="div">
+                  <div class="text">Notifications</div>
+                  <div class="text-wrapper">⌘N</div>
+                </div>
+              </div>
+            </div>
+            <div class="button">
+              <div class="img-wrapper"><img class="img" src="img/Sun-Icon.png" /></div>
+              <div class="tooltip-4">
+                <div class="div">
+                  <div class="text">Rightbar</div>
+                  <div class="text-wrapper">⌘R</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="overlap-16">
+        <div class="text-34">Configure</div>
+          <div class="text-2"><button class="button-3"></button><div class="text-40">Devices</div>
+          <div class="img-wrapper"><img class="img-2" src="img/dropdown-arrow.png" /></div>
+      </div></div>
+      <div class="frame-2">
+        <div class="devices-frame">
+        <div class="card">
+          <div class="content">
+            <div class="text-6">
+              <div class="text-7">Worker 1&nbsp;&nbsp;- RPi&nbsp;&nbsp;-&nbsp;&nbsp; 128.0.0.1</div>
+            </div>
+          </div>
+          <div class="content-2">
+            <div class="rolling-number">
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element">0<br />1<br />2<br />3<br />4<br />5<br />6<br />1<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number"><div class="text-wrapper-2">.</div></div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element-2">0<br />1<br />5<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element-3">0<br />1<br />2<br />3<br />4<br />5<br />0<br />7<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element-4">0<br />1<br />2<br />3<br />4<br />0<br />6<br />7<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="icon-text-2">
+              <div class="text-2"><div class="text-8">GHz</div></div>
+              <div class="icon-set"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-2">
+          <div class="content">
+            <div class="text-6"><p class="text-7">Worker 2- Nano - 128.0.0.2</p></div>
+          </div>
+          <div class="content-2">
+            <div class="rolling-number">
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element-5">0<br />1<br />2<br />1<br />4<br />5<br />6<br />7<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number"><div class="text-wrapper-2">.</div></div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element-3">0<br />1<br />2<br />3<br />4<br />5<br />8<br />7<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element">0<br />1<br />2<br />3<br />4<br />5<br />6<br />0<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element-6">0<br />0<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="icon-text-2">
+              <div class="text-2"><div class="text-8">GHz</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <div class="text-6"><div class="text-7">Worker 3 - RPi&nbsp;&nbsp;-&nbsp;&nbsp;128.0.0.3</div></div>
+          </div>
+          <div class="content-2">
+            <div class="rolling-number">
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element-6">0<br />1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element-4">0<br />1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element-3">0<br />1<br />2<br />3<br />4<br />5<br />0<br />7<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="icon-text-2">
+              <div class="text-2"><div class="text-8">GHz</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-2">
+          <div class="content">
+            <div class="text-6"><div class="text-8">Worker 4-Nano - 128.0.0.4</div></div>
+          </div>
+          <div class="content-2">
+            <div class="rolling-number">
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element-2">0<br />1<br />1<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number"><div class="text-wrapper-2">.</div></div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element-5">0<br />1<br />2<br />6<br />4<br />5<br />6<br />7<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element-6">0<br />0<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element-7">0<br />1<br />2<br />3<br />4<br />5<br />6<br />7<br />0<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="icon-text-2">
+              <div class="text-2"><div class="text-8">GHz</div></div>
+            </div>
+          </div>
+        </div>
+          <div class="card">
+            <div class="content">
+                <div class="text-6"><div class="text-7">Worker 5 - RPi&nbsp;&nbsp;-&nbsp;&nbsp;128.0.0.5</div></div>
+                </div>
+        <div class="content-2">
+          <div class="rolling-number">
+            <div class="roll-numbers">
+              <div class="number">
+                <div class="element-wrapper">
+                  <div class="element-6">0<br />1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />0</div>
+                </div>
+              </div>
+            </div>
+            <div class="roll-numbers">
+              <div class="number">
+                <div class="element-wrapper">
+                  <div class="element-4">0<br />1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />0</div>
+                </div>
+              </div>
+            </div>
+            <div class="roll-numbers">
+              <div class="number">
+                <div class="element-wrapper">
+                  <div class="element-3">0<br />1<br />2<br />3<br />4<br />5<br />0<br />7<br />8<br />9<br />0</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="icon-text-2">
+            <div class="text-2"><div class="text-8">GHz</div></div>
+          </div>
+        </div>
+      </div>
+        <div class="card-2">
+          <div class="content">
+            <div class="text-6"><div class="text-8">Worker 6- Nano - 128.0.0.6</div></div>
+          </div>
+          <div class="content-2">
+            <div class="rolling-number">
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element-2">0<br />1<br />1<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number"><div class="text-wrapper-2">.</div></div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element-5">0<br />1<br />2<br />6<br />4<br />5<br />6<br />7<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="roll-numbers">
+                <div class="number">
+                  <div class="element-wrapper">
+                    <div class="element-6">0<br />0<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="icon-text-2">
+              <div class="text-2"><div class="text-8">GHz</div></div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="top-section">
+          <div class="pagenation">
+            <div class="button-navigation">
+              <div class="left"><img class="img-3" src="img/left.svg" /></div>
+            </div>
+            <div class="left-wrapper">
+              <div class="left"><img class="img-3" src="img/left-2.svg" /></div>
+            </div>
+          </div>
+          <div class="button-navigation-2">
+            <div class="left"><img class="img-3" src="img/outline.svg" /></div>
+          </div>
+          <div class="cards"></div>
+          <div class="cards-2"></div>
+          <div class="coin-cards">
+            <img class="coin-card" src="img/coin-card-4.svg" /> <img class="coin-card-2" src="img/coin-card.svg" />
+          </div>
+        </div>
+        <div class="block">
+          <div class="div-2">
+            <div class="tap">
+              <div class="text-2"><div class="text-9">CPU</div></div>
+            </div>
+            <div class="tap">
+              <div class="text-2"><div class="text-10">Observed</div></div>
+            </div>
+            <div class="tap">
+              <div class="text-2"><div class="text-11">Perdicted</div></div>
+            </div>
+            <div class="text-2"><div class="text-12">|</div></div>
+            <div class="tag">
+              <img class="img-2" src="img/dot-3.svg" />
+              <div class="tag-2">5 second interval</div>
+            </div>
+            <div class="tag">
+              <img class="img-2" src="img/dot-4.svg" />
+              <div class="tag-2">Model: HDP-HSMM</div>
+            </div>
+          </div>
+          <div class="graph">
+ <!-- Resources -->
+
+ 
+ <!-- Chart code -->
+ <script>
+ am5.ready(function() {
+ 
+ 
+ // Create root element
+ // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+ var root = am5.Root.new("chartdiv");
+ 
+ 
+ // Set themes
+ // https://www.amcharts.com/docs/v5/concepts/themes/
+ root.setThemes([
+   am5themes_Animated.new(root)
+ ]);
+ 
+ 
+ // Create chart
+ // https://www.amcharts.com/docs/v5/charts/xy-chart/
+ var chart = root.container.children.push(am5xy.XYChart.new(root, {
+   panX: true,
+   panY: true,
+   wheelX: "panX",
+   wheelY: "zoomX",
+   pinchZoomX: true,
+   paddingLeft: 0
+ }));
+ 
+ // Add cursor
+ // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
+ var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
+   behavior: "none"
+ }));
+ cursor.lineY.set("visible", false);
+ 
+ 
+ // Generate random data
+ var date = new Date();
+ date.setHours(0, 0, 0, 0);
+ var value = 100;
+ 
+ function generateData() {
+   value = Math.round((Math.random() * 10 - 5) + value);
+   am5.time.add(date, "day", 1);
+   return {
+     date: date.getTime(),
+     value: value
+   };
+ }
+ 
+ function generateDatas(count) {
+   var data = [];
+   for (var i = 0; i < count; ++i) {
+     data.push(generateData());
+   }
+   return data;
+ }
+ 
+ 
+ // Create axes
+ // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+ var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
+   maxDeviation: 0.5,
+   baseInterval: {
+     timeUnit: "day",
+     count: 1
+   },
+   renderer: am5xy.AxisRendererX.new(root, {
+     minGridDistance: 80,
+     minorGridEnabled: true,
+     pan: "zoom"
+   }),
+   tooltip: am5.Tooltip.new(root, {})
+ }));
+ 
+ var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+   maxDeviation: 1,
+   renderer: am5xy.AxisRendererY.new(root, {
+     pan: "zoom"
+   })
+ }));
+ 
+ 
+ // Add series
+ // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+ var series = chart.series.push(am5xy.SmoothedXLineSeries.new(root, {
+   name: "Series",
+   xAxis: xAxis,
+   yAxis: yAxis,
+   valueYField: "value",
+   valueXField: "date",
+   tooltip: am5.Tooltip.new(root, {
+     labelText: "{valueY}"
+   })
+ }));
+ 
+ series.fills.template.setAll({
+   visible: true,
+   fillOpacity: 0.2
+ });
+ 
+ series.bullets.push(function () {
+   return am5.Bullet.new(root, {
+     locationY: 0,
+     sprite: am5.Circle.new(root, {
+       radius: 4,
+       stroke: root.interfaceColors.get("background"),
+       strokeWidth: 2,
+       fill: series.get("fill")
+     })
+   });
+ });
+ 
+ 
+ // Add scrollbar
+ // https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
+ chart.set("scrollbarX", am5.Scrollbar.new(root, {
+   orientation: "horizontal"
+ }));
+ 
+ 
+ var data = generateDatas(50);
+ series.data.setAll(data);
+ 
+ 
+ // Make stuff animate on load
+ // https://www.amcharts.com/docs/v5/concepts/animations/
+ series.appear(1000);
+ chart.appear(1000, 100);
+ 
+ }); // end am5.ready()
+ </script>
+ 
+ <!-- HTML -->
+ <div id="chartdiv"></div>
+          </div>
+
+        </div>
+        <div class="block-4">
+          <div class="text-33"><div class="text-34">Model Accuracy</div></div>
+          <div class="div-4">
+            <div class="text-35">
+              <div class="text-36">RMSE</div>
+              <div class="text-37">RMSE</div>
+              <div class="text-37">MAE</div>
+              <div class="text-37">MAPE</div>
+              <div class="text-37">Accuracy</div>
+              <div class="text-37">Recall</div>
+            </div>
+
+          </div>
+        </div>
+        <div class="block-5">
+          <div class="text-33"><div class="text-34">Benchmark Results</div></div>
+          <div class="div-4">
+            <div class="left-text">
+              <div class="element-26">30</div>
+              <div class="element-27">20</div>
+              <div class="element-27">10</div>
+              <div class="element-27">0</div>
+            </div>
+            <div class="frame-3">
+              <div class="line-7"></div>
+              <div class="bottom-text-3">
+                <div class="element-28">CPU</div>
+                <div class="element-28">MEM</div>
+                <div class="element-28">NET</div>
+                <div class="element-28">MIX</div>
+                <div class="element-28">CPU</div>
+                <div class="element-28">MEM</div>
+                <div class="element-28">NET</div>
+                <div class="element-28">MIX</div>
+                <div class="element-28">CPU</div>
+                <div class="element-28">MEM</div>
+                <div class="element-28">NET</div>
+                <div class="element-28">MIX</div>
+              </div>
+              <div class="vertical-bar">
+                <div class="element-29">
+                  <div class="rectangle-5"></div>
+                  <div class="rectangle-6"></div>
+                  <div class="rectangle-6"></div>
+                  <div class="rectangle-6"></div>
+                  <div class="rectangle-7"></div>
+                  <div class="rectangle-8"></div>
+                  <div class="rectangle-8"></div>
+                  <div class="rectangle-9"></div>
+                  <div class="tooltip-5">
+                    <div class="text-38"><div class="text-39">2,000</div></div>
+                  </div>
+                </div>
+                <div class="element-29">
+                  <div class="rectangle-10"></div>
+                  <div class="rectangle-11"></div>
+                  <div class="rectangle-12"></div>
+                  <div class="rectangle-12"></div>
+                  <div class="rectangle-12"></div>
+                  <div class="rectangle-12"></div>
+                  <div class="rectangle-12"></div>
+                  <div class="rectangle-13"></div>
+                  <div class="tooltip-6">
+                    <div class="text-38"><div class="text-39">5,000</div></div>
+                  </div>
+                </div>
+                <div class="element-29">
+                  <div class="rectangle-14"></div>
+                  <div class="rectangle-15"></div>
+                  <div class="rectangle-15"></div>
+                  <div class="rectangle-16"></div>
+                  <div class="rectangle-17"></div>
+                  <div class="rectangle-17"></div>
+                  <div class="rectangle-17"></div>
+                  <div class="rectangle-18"></div>
+                  <div class="tooltip-7">
+                    <div class="text-38"><div class="text-39">3,000</div></div>
+                  </div>
+                </div>
+                <div class="element-30">
+                  <div class="rectangle-19"></div>
+                  <div class="rectangle-20"></div>
+                  <div class="rectangle-20"></div>
+                  <div class="rectangle-20"></div>
+                  <div class="rectangle-20"></div>
+                  <div class="rectangle-20"></div>
+                  <div class="rectangle-20"></div>
+                  <div class="rectangle-21"></div>
+                  <div class="tooltip-8">
+                    <div class="text-38"><div class="text-39">6,000</div></div>
+                  </div>
+                </div>
+                <div class="element-29">
+                  <div class="rectangle-22"></div>
+                  <div class="rectangle-23"></div>
+                  <div class="rectangle-23"></div>
+                  <div class="rectangle-23"></div>
+                  <div class="rectangle-23"></div>
+                  <div class="rectangle-24"></div>
+                  <div class="rectangle-25"></div>
+                  <div class="rectangle-26"></div>
+                  <div class="tooltip-9">
+                    <div class="text-38"><div class="text-39">1,000</div></div>
+                  </div>
+                </div>
+                <div class="element-29">
+                  <div class="rectangle-27"></div>
+                  <div class="rectangle-28"></div>
+                  <div class="rectangle-29"></div>
+                  <div class="rectangle-30"></div>
+                  <div class="rectangle-30"></div>
+                  <div class="rectangle-30"></div>
+                  <div class="rectangle-30"></div>
+                  <div class="rectangle-31"></div>
+                  <div class="tooltip-10">
+                    <div class="text-38"><div class="text-39">4,000</div></div>
+                  </div>
+                </div>
+                <div class="element-29">
+                  <div class="rectangle-5"></div>
+                  <div class="rectangle-6"></div>
+                  <div class="rectangle-6"></div>
+                  <div class="rectangle-6"></div>
+                  <div class="rectangle-7"></div>
+                  <div class="rectangle-8"></div>
+                  <div class="rectangle-8"></div>
+                  <div class="rectangle-9"></div>
+                  <div class="tooltip-5">
+                    <div class="text-38"><div class="text-39">2,000</div></div>
+                  </div>
+                </div>
+                <div class="element-29">
+                  <div class="rectangle-10"></div>
+                  <div class="rectangle-11"></div>
+                  <div class="rectangle-12"></div>
+                  <div class="rectangle-12"></div>
+                  <div class="rectangle-12"></div>
+                  <div class="rectangle-12"></div>
+                  <div class="rectangle-12"></div>
+                  <div class="rectangle-13"></div>
+                  <div class="tooltip-6">
+                    <div class="text-38"><div class="text-39">5,000</div></div>
+                  </div>
+                </div>
+                <div class="element-29">
+                  <div class="rectangle-14"></div>
+                  <div class="rectangle-15"></div>
+                  <div class="rectangle-15"></div>
+                  <div class="rectangle-16"></div>
+                  <div class="rectangle-17"></div>
+                  <div class="rectangle-17"></div>
+                  <div class="rectangle-17"></div>
+                  <div class="rectangle-18"></div>
+                  <div class="tooltip-7">
+                    <div class="text-38"><div class="text-39">3,000</div></div>
+                  </div>
+                </div>
+                <div class="element-29">
+                  <div class="rectangle-19"></div>
+                  <div class="rectangle-20"></div>
+                  <div class="rectangle-20"></div>
+                  <div class="rectangle-20"></div>
+                  <div class="rectangle-20"></div>
+                  <div class="rectangle-20"></div>
+                  <div class="rectangle-20"></div>
+                  <div class="rectangle-21"></div>
+                  <div class="tooltip-8">
+                    <div class="text-38"><div class="text-39">6,000</div></div>
+                  </div>
+                </div>
+                <div class="element-29">
+                  <div class="rectangle-22"></div>
+                  <div class="rectangle-23"></div>
+                  <div class="rectangle-23"></div>
+                  <div class="rectangle-23"></div>
+                  <div class="rectangle-23"></div>
+                  <div class="rectangle-24"></div>
+                  <div class="rectangle-25"></div>
+                  <div class="rectangle-26"></div>
+                  <div class="tooltip-9">
+                    <div class="text-38"><div class="text-39">1,000</div></div>
+                  </div>
+                </div>
+                <div class="element-29">
+                  <div class="rectangle-27"></div>
+                  <div class="rectangle-28"></div>
+                  <div class="rectangle-29"></div>
+                  <div class="rectangle-30"></div>
+                  <div class="rectangle-30"></div>
+                  <div class="rectangle-30"></div>
+                  <div class="rectangle-30"></div>
+                  <div class="rectangle-31"></div>
+                  <div class="tooltip-10">
+                    <div class="text-38"><div class="text-39">4,000</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-6">
+          <div class="text-33"><div class="text-27">Benchmark Distribution</div></div>
+          <div class="chart-2">
+            <div class="left-text">
+              <div class="element-31">30</div>
+              <div class="element-32">20</div>
+              <div class="element-32">10</div>
+              <div class="element-32">0</div>
+            </div>
+            <div class="frame-3">
+              <div class="div-3">
+                <img class="element-33" src="img/4-4.svg" />
+                <img class="element-34" src="img/3.svg" />
+                <img class="element-34" src="img/2.svg" />
+                <img class="element-35" src="img/1-3.svg" />
+              </div>
+              
+              <div class="bottom-text-4">
+                <div class="element-25">Jan</div>
+                <div class="element-25">Feb</div>
+                <div class="element-25">Mar</div>
+                <div class="element-25">Apr</div>
+                <div class="element-25">May</div>
+                <div class="element-25">Jun</div>
+              </div>
+            </div>
+          </div>
+          <div class="block-7">
+            <div class="text-42">
+              <div class="text-28">Stock Report</div>
+              <div class="text-29">View Stock</div>
+            </div>
+            <div class="table">
+              <div class="frame-4">
+                <div class="text-17"><div class="text-30">Item</div></div>
+                <div class="text-19"><div class="text-31">ASOS Ridley High Waist</div></div>
+                <div class="text-21"><div class="text-32">Marco Lightweight Shirt</div></div>
+                <div class="text-19"><div class="text-31">Half Sleeve&nbsp;&nbsp;Shirt</div></div>
+                <div class="text-19"><div class="text-31">Lightweight Jacket</div></div>
+                <div class="text-19"><div class="text-31">Marco Shoes</div></div>
+              </div>
+              <div class="frame-5">
+                <div class="text-23"><div class="text-30">Price</div></div>
+                <div class="text-24"><div class="text-31">$79.49</div></div>
+                <div class="text-25"><div class="text-31">$128.50</div></div>
+                <div class="text-24"><div class="text-31">$39.99</div></div>
+                <div class="text-24"><div class="text-31">$20.00</div></div>
+                <div class="text-24"><div class="text-31">$28.49</div></div>
+              </div>
+              <div class="frame-5">
+                <div class="text-23"><div class="text-30">Quantity</div></div>
+                <div class="text-24"><div class="text-31">82</div></div>
+                <div class="text-25"><div class="text-31">37</div></div>
+                <div class="text-24"><div class="text-31">64</div></div>
+                <div class="text-24"><div class="text-31">184</div></div>
+                <div class="text-24"><div class="text-31">64</div></div>
+              </div>
+              <div class="frame-6">
+                <div class="text-23"><div class="text-30">Status</div></div>
+                <div class="status-badge-wrapper">
+                  <div class="status-badge-4"><div class="text-wrapper-23">In Progress</div></div>
+                </div>
+                <div class="status-badge-wrapper">
+                  <div class="status-badge-5"><div class="text-wrapper-24">Complete</div></div>
+                </div>
+                <div class="status-badge-wrapper">
+                  <div class="status-badge-3"><div class="text-wrapper-25">Pending</div></div>
+                </div>
+                <div class="status-badge-wrapper">
+                  <div class="status-badge-5"><div class="text-wrapper-24">Complete</div></div>
+                </div>
+                <div class="status-badge-wrapper">
+                  <div class="status-badge-4"><div class="text-wrapper-23">In Progress</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-8">
+          <div class="text-42">
+            <div class="text-28">Available Models</div>
+            <div class="text-43"></div>
+          </div>
+          <div class="table-2">
+            <div class="frame-4">
+              <div class="text-17"><div class="text-30">Model</div></div>
+              <div class="text-19"><div class="text-31">Filtered - HBLED</div></div>
+              <div class="text-21"><div class="text-31">HDP-HSMM</div></div>
+              <div class="text-19"><div class="text-31">HBLED</div></div>
+              <div class="text-19"><div class="text-31">Google API</div></div>
+              <div class="text-19"><div class="text-31">MiniNet</div></div>
+            </div>
+            <div class="frame-5">
+              <div class="text-23"><div class="text-30">Accuracy</div></div>
+              <div class="text-24"><div class="text-31">91.26%</div></div>
+              <div class="text-25"><div class="text-31">90.82%</div></div>
+              <div class="text-24"><div class="text-31">87.58%</div></div>
+              <div class="text-24"><div class="text-31">85.23%</div></div>
+              <div class="text-24"><div class="text-31">74.98%</div></div>
+            </div>
+            <div class="frame-5">
+              <div class="text-23"><div class="text-30">Data Size</div></div>
+              <div class="text-24"><div class="text-31">28061</div></div>
+              <div class="text-25"><div class="text-31">31817</div></div>
+              <div class="text-24"><div class="text-31">21048</div></div>
+              <div class="text-24"><div class="text-31">21048</div></div>
+              <div class="text-24"><div class="text-31">12652</div></div>
+            </div>
+            <div class="frame-6">
+              <div class="text-23"><div class="text-30">Status</div></div>
+              <div class="status-badge-wrapper">
+                <div class="in-progress-wrapper"><div class="text-wrapper-23">Trained</div></div>
+              </div>
+              <div class="status-badge-wrapper">
+                <div class="complete-wrapper"><div class="text-wrapper-24">Tested</div></div>
+              </div>
+              <div class="status-badge-wrapper">
+                <div class="status-badge-3"><div class="text-wrapper-25">Pending</div></div>
+              </div>
+              <div class="status-badge-wrapper">
+                <div class="complete-wrapper"><div class="text-wrapper-24">Tested</div></div>
+              </div>
+              <div class="status-badge-wrapper">
+                <div class="in-progress-wrapper"><div class="text-wrapper-23">Trained</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-9">
+          <div class="text-33"><div class="text-27">Worker 1</div></div>
+          <div class="div-4">
+            <div class="left-text">
+              <div class="element-31">30</div>
+              <div class="element-32">20</div>
+              <div class="element-32">10</div>
+              <div class="element-32">0</div>
+            </div>
+            <div class="frame-3">
+              <div class="div-3">
+                <img class="element-33" src="img/4.svg" />
+                <img class="element-34" src="img/3-3.svg" />
+                <img class="element-34" src="img/2-4.svg" />
+                <img class="element-35" src="img/1-4.svg" />
+              </div>
+              <div class="bottom-text-5">
+                <div class="element-25">Jan</div>
+                <div class="element-25">Feb</div>
+                <div class="element-25">Mar</div>
+                <div class="element-25">Apr</div>
+                <div class="element-25">May</div>
+                <div class="element-25">Jun</div>
+              </div>
+              <div class="overlap-group-wrapper">
+                <div class="overlap-group-5">
+                  <img class="frame-7" src="img/frame-1.svg" />
+                  <img class="vector" src="img/vector-660.svg" />
+                  <div class="chart-dot"><div class="ellipse"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-10">
+          <div class="div-2">
+            <div class="text-6"><div class="text-27">Sessions</div></div>
+            <button class="button-2">
+              <div class="text-2"><div class="text-44">1 Hour</div></div>
+              <div class="img-wrapper"><img class="img-2" src="img/arrow-line-down.svg" /></div>
+            </button>
+          </div>
+          <div class="table-3">
+            <div class="frame-8">
+              <div class="text-17"><div class="text-30">Worker</div></div>
+              <div class="text-19"><div class="text-31">Worker 1</div></div>
+              <div class="text-21"><div class="text-31">Worker 2</div></div>
+              <div class="text-19"><div class="text-31">Worker 3</div></div>
+              <div class="text-19"><div class="text-31">Worker 4</div></div>
+              <div class="text-19"><div class="text-31">Worker 5</div></div>
+            </div>
+            <div class="frame-5">
+              <div class="text-23"><div class="text-30">Device</div></div>
+              <div class="text-24"><div class="text-31">Raspberry Pi</div></div>
+              <div class="text-25"><div class="text-31">Jetson Nano</div></div>
+              <div class="text-24"><div class="text-31">Raspberry Pi</div></div>
+              <div class="text-24"><div class="text-31">Jetson Nano</div></div>
+              <div class="text-24"><div class="text-31">Raspberry Pi</div></div>
+            </div>
+            <div class="frame-9">
+              <div class="text-23"><div class="text-30">IP Address</div></div>
+              <div class="text-24"><div class="text-31">236.125.56.78</div></div>
+              <div class="text-25"><div class="text-31">236.125.56.69</div></div>
+              <div class="text-24"><div class="text-31">236.125.56.10</div></div>
+              <div class="text-24"><div class="text-31">236.125.56.54</div></div>
+              <div class="text-24"><div class="text-31">236.100.56.50</div></div>
+            </div>
+            <div class="frame-10">
+              <div class="text-23"><div class="text-30">Time</div></div>
+              <div class="icon-text-wrapper">
+                <div class="icon-text">
+                  <div class="icon-set"><img class="img-2" src="img/clock.svg" /></div>
+                  <div class="text-6"><div class="text-32">2 minutes ago</div></div>
+                </div>
+              </div>
+              <div class="icon-text-wrapper">
+                <div class="icon-text">
+                  <div class="icon-set"><img class="img-2" src="img/clock.svg" /></div>
+                  <div class="text-6"><div class="text-32">10 minutes ago</div></div>
+                </div>
+              </div>
+              <div class="icon-text-wrapper">
+                <div class="icon-text">
+                  <div class="icon-set"><img class="img-2" src="img/clock.svg" /></div>
+                  <div class="text-6"><div class="text-32">20 minutes ago</div></div>
+                </div>
+              </div>
+              <div class="icon-text-wrapper">
+                <div class="icon-text">
+                  <div class="icon-set"><img class="img-2" src="img/clock.svg" /></div>
+                  <div class="text-6"><div class="text-32">30 minutes ago</div></div>
+                </div>
+              </div>
+              <div class="icon-text-wrapper">
+                <div class="icon-text">
+                  <div class="icon-set"><img class="img-2" src="img/clock.svg" /></div>
+                  <div class="text-6"><div class="text-32">40 minutes ago</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-11">
+              <div class="text-23"><div class="text-30">Status</div></div>
+              <div class="status-badge-wrapper">
+                <div class="status-badge-6">
+                  <img class="img-2" src="img/dot.svg" />
+                  <div class="text-wrapper-24">Idle</div>
+                </div>
+              </div>
+              <div class="status-badge-wrapper">
+                <div class="status-badge-6">
+                  <img class="img-2" src="img/dot.svg" />
+                  <div class="text-wrapper-24">Game</div>
+                </div>
+              </div>
+              <div class="status-badge-wrapper">
+                <div class="status-badge-6">
+                  <img class="img-2" src="img/dot.svg" />
+                  <div class="text-wrapper-24">Stream</div>
+                </div>
+              </div>
+              <div class="status-badge-wrapper">
+                <div class="status-badge-6">
+                  <img class="img-2" src="img/image.svg" />
+                  <div class="rejected">Crypto-Mining</div>
+                </div>
+              </div>
+              <div class="status-badge-wrapper">
+                <div class="status-badge-7">
+                  <img class="img-2" src="img/image.svg" />
+                  <div class="rejected">Image Processing</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="chartdiv"></div>					
+      </div>
+
+    </div>
+  </body>
+</html>

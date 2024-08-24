@@ -1,0 +1,2536 @@
+{
+    "workers_param_dict": {
+        "master": {
+            "name": "master",
+            "device_type": "PC",
+            "setup": {
+                "data": {
+                    "dataset_name": null,
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream",
+                        "mining"
+                    ],
+                    "manual": false,
+                    "FREQ": 1800,
+                    "BW": 12000,
+                    "TYPE": "test",
+                    "NAME": "benchmarks",
+                    "data_DURATION": 43200,
+                    "chunk_size": 60,
+                    "max_chunk_mult": 4,
+                    "interval": 5,
+                    "powerMode": 0,
+                    "realtime_drudge_DURATION": 10000
+                },
+                "models": {
+                    "hdp_hsmm": {
+                        "extra_states": [
+                            1,
+                            2
+                        ],
+                        "kappa": [
+                            0.05,
+                            0.1
+                        ],
+                        "progprint": [
+                            800
+                        ],
+                        "train_count_limit": 3,
+                        "model_name": null
+                    },
+                    "hbled": {
+                        "neuron_mult": 1,
+                        "lr_itr": 0.001,
+                        "num_epoch_itr": 10,
+                        "val_split": 0.8,
+                        "model_name": null
+                    },
+                    "input-output": {
+                        "features": [
+                            "cpu_times_user_state_diff",
+                            "cpu_times_system_state_diff",
+                            "memory_percent_state",
+                            "net_sent_diff"
+                        ],
+                        "features_name": "cpu_memory_state_net",
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "lookback": 10,
+                        "predicton_steps": 1,
+                        "split_ratio": 0.7
+                    },
+                    "standard_labels": {
+                        "idle": 0,
+                        "stream": 1,
+                        "game": 2,
+                        "augmented_reality": 3,
+                        "mining": 4
+                    },
+                    "inverted_standard_labels": {
+                        "0": "idle",
+                        "1": "stream",
+                        "2": "game",
+                        "3": "augmented_reality",
+                        "4": "mining"
+                    }
+                },
+                "benchmarks": {
+                    "cpu": {
+                        "array_size": 1500,
+                        "iterations": 30
+                    },
+                    "mem": {
+                        "array_size": 100000000,
+                        "iterations": 1
+                    },
+                    "net": {
+                        "data_size": 2000000,
+                        "iterations": 100
+                    },
+                    "mix": {
+                        "mat_size": 1500,
+                        "mat_iterations": 30,
+                        "mem_array_size": 100000000,
+                        "mem_iterations": 1,
+                        "network_data_size": 2000000,
+                        "network_iterations": 60
+                    }
+                },
+                "tasks": {
+                    "cpu": {
+                        "array_size": 1500,
+                        "iterations": 150
+                    },
+                    "mem": {
+                        "array_size": 100000000,
+                        "iterations": 5
+                    },
+                    "net": {
+                        "data_size": 2000000,
+                        "iterations": 500
+                    },
+                    "mix": {
+                        "mat_size": 1500,
+                        "mat_iterations": 150,
+                        "mem_array_size": 100000000,
+                        "mem_iterations": 5,
+                        "network_data_size": 2000000,
+                        "network_iterations": 300
+                    }
+                }
+            }
+        },
+        "192.168.0.189": {
+            "name": "worker1-rpi8",
+            "device_type": "RPi",
+            "username": "worker1-rpi8",
+            "setup": {
+                "data": {
+                    "dataset_name": null,
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream",
+                        "mining"
+                    ],
+                    "manual": false,
+                    "FREQ": 1800,
+                    "BW": 12000,
+                    "TYPE": "test",
+                    "NAME": "benchmarks",
+                    "data_DURATION": 43200,
+                    "chunk_size": 60,
+                    "max_chunk_mult": 4,
+                    "interval": 5,
+                    "powerMode": 0,
+                    "realtime_drudge_DURATION": 10000
+                },
+                "models": {
+                    "hdp_hsmm": {
+                        "extra_states": [
+                            1,
+                            2
+                        ],
+                        "kappa": [
+                            0.05,
+                            0.1
+                        ],
+                        "progprint": [
+                            800
+                        ],
+                        "train_count_limit": 3,
+                        "model_name": null
+                    },
+                    "hbled": {
+                        "neuron_mult": 1,
+                        "lr_itr": 0.001,
+                        "num_epoch_itr": 10,
+                        "val_split": 0.8,
+                        "model_name": null
+                    },
+                    "input-output": {
+                        "features": [
+                            "cpu_times_user_state_diff",
+                            "cpu_times_system_state_diff",
+                            "memory_percent_state",
+                            "net_sent_diff"
+                        ],
+                        "features_name": "cpu_memory_state_net",
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "lookback": 10,
+                        "predicton_steps": 1,
+                        "split_ratio": 0.7
+                    },
+                    "standard_labels": {
+                        "idle": 0,
+                        "stream": 1,
+                        "game": 2,
+                        "augmented_reality": 3,
+                        "mining": 4
+                    },
+                    "inverted_standard_labels": {
+                        "0": "idle",
+                        "1": "stream",
+                        "2": "game",
+                        "3": "augmented_reality",
+                        "4": "mining"
+                    }
+                },
+                "benchmarks": {
+                    "cpu": {
+                        "array_size": 1500,
+                        "iterations": 30
+                    },
+                    "mem": {
+                        "array_size": 100000000,
+                        "iterations": 1
+                    },
+                    "net": {
+                        "data_size": 2000000,
+                        "iterations": 100
+                    },
+                    "mix": {
+                        "mat_size": 1500,
+                        "mat_iterations": 30,
+                        "mem_array_size": 100000000,
+                        "mem_iterations": 1,
+                        "network_data_size": 2000000,
+                        "network_iterations": 60
+                    }
+                },
+                "tasks": {
+                    "cpu": {
+                        "array_size": 1500,
+                        "iterations": 150
+                    },
+                    "mem": {
+                        "array_size": 100000000,
+                        "iterations": 5
+                    },
+                    "net": {
+                        "data_size": 2000000,
+                        "iterations": 500
+                    },
+                    "mix": {
+                        "mat_size": 1500,
+                        "mat_iterations": 150,
+                        "mem_array_size": 100000000,
+                        "mem_iterations": 5,
+                        "network_data_size": 2000000,
+                        "network_iterations": 300
+                    }
+                }
+            },
+            "datasets": {
+                "worker1-rpi8_1800_res_usage_data_random_dev1_86400sec": {
+                    "FREQ": 1800,
+                    "powerMode": null,
+                    "TYPE": "random",
+                    "NAME": "dev1",
+                    "data_DURATION": 86400,
+                    "chunk_size": 60,
+                    "max_chunk_mult": 2,
+                    "interval": 5
+                },
+                "worker1-rpi8_1800_res_usage_data_test_dev1_300sec": {
+                    "FREQ": 1800,
+                    "powerMode": null,
+                    "TYPE": "test",
+                    "NAME": "dev1",
+                    "data_DURATION": 300,
+                    "chunk_size": 60,
+                    "max_chunk_mult": 0,
+                    "interval": 5
+                },
+                "worker1-rpi8_1800_res_usage_data_random_proceed_7200sec": {
+                    "FREQ": 1800,
+                    "powerMode": 0,
+                    "TYPE": "random",
+                    "NAME": "proceed",
+                    "data_DURATION": 7200,
+                    "chunk_size": 60,
+                    "max_chunk_mult": 5,
+                    "interval": 5
+                },
+                "worker1-rpi8_1800_res_usage_data_random_proceed_43200sec": {
+                    "FREQ": 1800,
+                    "powerMode": 0,
+                    "TYPE": "random",
+                    "NAME": "proceed",
+                    "data_DURATION": 7200,
+                    "chunk_size": 120,
+                    "max_chunk_mult": 5,
+                    "interval": 5
+                },
+                "worker1-rpi8_1800_res_usage_data_random_no_mining_21600sec": {
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream"
+                    ],
+                    "FREQ": 1800,
+                    "powerMode": 0,
+                    "TYPE": "random",
+                    "NAME": "no_mining",
+                    "data_DURATION": 21600,
+                    "chunk_size": 120,
+                    "max_chunk_mult": 4,
+                    "interval": 5
+                },
+                "worker1-rpi8_1800_res_usage_data_random_proceed_30000sec": {
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream",
+                        "mining"
+                    ],
+                    "FREQ": 1800,
+                    "powerMode": 0,
+                    "TYPE": "random",
+                    "NAME": "proceed",
+                    "data_DURATION": 30000,
+                    "chunk_size": 120,
+                    "max_chunk_mult": 4,
+                    "interval": 5
+                },
+                "worker1-rpi8_1800_5000_res_usage_data_test_bandwidth_300sec": {
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream",
+                        "mining"
+                    ],
+                    "FREQ": 1800,
+                    "powerMode": 0,
+                    "BW": 5000,
+                    "TYPE": "test",
+                    "NAME": "bandwidth",
+                    "data_DURATION": 300,
+                    "chunk_size": 120,
+                    "max_chunk_mult": 4,
+                    "interval": 5
+                },
+                "worker1-rpi8_1800_12000_res_usage_data_pattern_bandwidth_43200sec": {
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream",
+                        "mining"
+                    ],
+                    "FREQ": 1800,
+                    "powerMode": 1,
+                    "BW": 12000,
+                    "TYPE": "pattern",
+                    "NAME": "bandwidth",
+                    "data_DURATION": 43200,
+                    "chunk_size": 120,
+                    "max_chunk_mult": 4,
+                    "interval": 5
+                }
+            },
+            "models": {
+                "hdp_hsmm": {
+                    "worker1-rpi8_1500_res_usage_data_pattern_dev1_86400sec_cpu_memory_percent_NoFilter": {
+                        "features": [
+                            "cpu",
+                            "memory"
+                        ],
+                        "features_name": "cpu_memory_percent",
+                        "FREQ": 1500,
+                        "powerMode": 0,
+                        "TYPE": "pattern",
+                        "NAME": "dev1",
+                        "data_DURATION": 86400,
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "Labels": null,
+                        "parameters": {
+                            "extra": 2,
+                            "kap": 0.05,
+                            "iter": 800
+                        },
+                        "metrics": null
+                    },
+                    "worker1-rpi8_1800_res_usage_data_random_no_mining_21600sec_cpu_memory_state_NoFilter": {
+                        "features": [
+                            "cpu_times_user_state_diff",
+                            "cpu_times_system_state_diff",
+                            "memory_percent_state"
+                        ],
+                        "features_name": "cpu_memory_state",
+                        "FREQ": 1800,
+                        "powerMode": 0,
+                        "TYPE": "random",
+                        "NAME": "no_mining",
+                        "states": [
+                            "idle",
+                            "augmented_reality",
+                            "game",
+                            "stream"
+                        ],
+                        "data_DURATION": 21600,
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "Labels": null,
+                        "parameters": {
+                            "extra": 2,
+                            "kap": 0.05,
+                            "iter": 800
+                        },
+                        "metrics": null
+                    }
+                },
+                "hbled": {
+                    "worker1-rpi8_1800_res_usage_data_random_proceed_7200sec_cpu_memory_state_net_sent_NoFilter_200Lookback_10Step": {
+                        "features": [
+                            "cpu_times_user_state_diff",
+                            "cpu_times_system_state_diff",
+                            "memory_percent_state",
+                            "net_sent_diff"
+                        ],
+                        "features_name": "cpu_memory_state_net_sent",
+                        "FREQ": 1800,
+                        "powerMode": 0,
+                        "TYPE": "random",
+                        "NAME": "proceed",
+                        "data_DURATION": 7200,
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "Labels": null,
+                        "neuron_mult": 2,
+                        "lr_itr": 1e-05,
+                        "num_epoch_itr": 25,
+                        "val_split": 0.8,
+                        "lookback": 200,
+                        "predicton_steps": 10,
+                        "metrics": null
+                    },
+                    "worker1-rpi8_1800_res_usage_data_random_proceed_7200sec_cpu_memory_net_sent_NoFilter_50Lookback_5Step": {
+                        "features": [
+                            "cpu_times_user_state_diff",
+                            "cpu_times_system_state_diff",
+                            "memory_percent_state",
+                            "net_sent_diff"
+                        ],
+                        "features_name": "cpu_memory_net_sent",
+                        "FREQ": 1800,
+                        "powerMode": 0,
+                        "TYPE": "random",
+                        "NAME": "proceed",
+                        "data_DURATION": 7200,
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "Labels": null,
+                        "neuron_mult": 1,
+                        "lr_itr": 1e-05,
+                        "num_epoch_itr": 25,
+                        "val_split": 0.8,
+                        "lookback": 50,
+                        "predicton_steps": 5,
+                        "metrics": null
+                    },
+                    "worker1-rpi8_1800_res_usage_data_random_no_mining_21600sec_cpu_memory_state_NoFilter_50Lookback_5Step": {
+                        "features": [
+                            "cpu_times_user_state_diff",
+                            "cpu_times_system_state_diff",
+                            "memory_percent_state"
+                        ],
+                        "features_name": "cpu_memory_state",
+                        "FREQ": 1800,
+                        "powerMode": 0,
+                        "TYPE": "random",
+                        "NAME": "no_mining",
+                        "states": [
+                            "idle",
+                            "augmented_reality",
+                            "game",
+                            "stream"
+                        ],
+                        "data_DURATION": 21600,
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "Labels": null,
+                        "neuron_mult": 1,
+                        "lr_itr": 1e-05,
+                        "num_epoch_itr": 30,
+                        "val_split": 0.8,
+                        "lookback": 50,
+                        "predicton_steps": 5,
+                        "metrics": null
+                    },
+                    "worker1-rpi8_1800_12000_res_usage_data_pattern_bandwidth_43200sec_cpu_memory_state_net_NoFilter_50Lookback_2Step": {
+                        "states": [
+                            "idle",
+                            "augmented_reality",
+                            "game",
+                            "stream",
+                            "mining"
+                        ],
+                        "features": [
+                            "cpu_times_user_state_diff",
+                            "cpu_times_system_state_diff",
+                            "memory_percent_state",
+                            "net_sent_diff"
+                        ],
+                        "features_name": "cpu_memory_state_net",
+                        "FREQ": 1800,
+                        "powerMode": 1,
+                        "BW": 12000,
+                        "TYPE": "pattern",
+                        "NAME": "bandwidth",
+                        "data_DURATION": 43200,
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "Labels": {
+                            "idle": 0,
+                            "stream": 1,
+                            "game": 2,
+                            "augmented_reality": 3,
+                            "mining": 4
+                        },
+                        "neuron_mult": 1,
+                        "lr_itr": 0.0001,
+                        "num_epoch_itr": 20,
+                        "val_split": 0.8,
+                        "lookback": 50,
+                        "predicton_steps": 2,
+                        "metrics": null
+                    }
+                }
+            },
+            "benchmarks": {
+                "cpu": {
+                    "idle": [
+                        25.467950582504272,
+                        25.70634889602661,
+                        25.772053480148315,
+                        26.57883858680725,
+                        25.743237733840942,
+                        25.84731650352478,
+                        27.068674325942993,
+                        26.38549566268921,
+                        26.2670316696167,
+                        26.625969409942627
+                    ],
+                    "stream": [
+                        27.547496795654297,
+                        26.867128133773804,
+                        27.1860032081604,
+                        26.34068775177002,
+                        26.698490858078003,
+                        27.549076318740845,
+                        26.134812355041504,
+                        26.476988315582275,
+                        27.660404682159424,
+                        27.289406776428223
+                    ],
+                    "game": [
+                        28.160076379776,
+                        27.711567163467407,
+                        27.458334922790527,
+                        28.230658769607544,
+                        28.06582546234131,
+                        27.38179588317871,
+                        27.840498685836792,
+                        27.80174994468689,
+                        28.09989309310913,
+                        27.86604404449463
+                    ],
+                    "augmented_reality": [
+                        35.291139364242554,
+                        34.95790219306946,
+                        34.534913063049316,
+                        33.59466028213501,
+                        34.43859052658081,
+                        35.07242250442505,
+                        34.39342403411865,
+                        35.7929744720459,
+                        34.59524631500244,
+                        34.88841891288757
+                    ],
+                    "mining": [
+                        36.88316583633423,
+                        36.87286329269409,
+                        37.6283655166626,
+                        37.39282202720642,
+                        37.82690668106079,
+                        37.32822346687317,
+                        37.57677221298218,
+                        37.4921350479126,
+                        37.53173518180847,
+                        37.12316346168518
+                    ]
+                },
+                "mem": {
+                    "idle": [
+                        26.799888134002686,
+                        26.97652816772461,
+                        26.77379322052002,
+                        27.366102933883667,
+                        27.121655225753784,
+                        26.88008427619934,
+                        27.1751389503479,
+                        27.052208423614502,
+                        27.163403511047363,
+                        26.865481853485107
+                    ],
+                    "stream": [
+                        27.16539216041565,
+                        27.47632122039795,
+                        26.98191785812378,
+                        26.900150060653687,
+                        27.22771668434143,
+                        27.07803225517273,
+                        27.474168062210083,
+                        26.97617197036743,
+                        27.202224493026733,
+                        26.922521829605103
+                    ],
+                    "game": [
+                        28.13871431350708,
+                        28.197633028030396,
+                        28.24620246887207,
+                        28.181166648864746,
+                        27.65425944328308,
+                        28.392926692962646,
+                        28.000436782836914,
+                        27.88024115562439,
+                        28.054819345474243,
+                        28.096980333328247
+                    ],
+                    "augmented_reality": [
+                        28.552608966827393,
+                        28.367931127548218,
+                        28.4985568523407,
+                        28.78503704071045,
+                        28.5352725982666,
+                        28.325779914855957,
+                        28.858808994293213,
+                        28.742506742477417,
+                        28.17411184310913,
+                        28.800601959228516
+                    ],
+                    "mining": [
+                        28.252703428268433,
+                        28.22812581062317,
+                        28.000311851501465,
+                        28.059635400772095,
+                        28.197293043136597,
+                        28.051101684570312,
+                        27.83441996574402,
+                        27.941845893859863,
+                        28.53561568260193,
+                        28.176970958709717
+                    ]
+                },
+                "net": {
+                    "idle": [
+                        32.234689474105835,
+                        32.44939613342285,
+                        32.6882860660553,
+                        31.78774070739746,
+                        31.949691772460938,
+                        32.680479526519775,
+                        32.087000608444214,
+                        31.679999351501465,
+                        32.16056418418884,
+                        31.61443829536438
+                    ],
+                    "stream": [
+                        33.007890701293945,
+                        34.08536672592163,
+                        32.58877110481262,
+                        32.027419567108154,
+                        31.907352209091187,
+                        31.736817359924316,
+                        31.917163133621216,
+                        32.67593264579773,
+                        33.23608756065369,
+                        32.74064517021179
+                    ],
+                    "game": [
+                        35.386680603027344,
+                        34.65883016586304,
+                        34.92519187927246,
+                        34.63257074356079,
+                        35.46524214744568,
+                        35.347293853759766,
+                        34.763795375823975,
+                        34.61129665374756,
+                        35.19255089759827,
+                        35.073795318603516
+                    ],
+                    "augmented_reality": [
+                        35.616294860839844,
+                        35.94383955001831,
+                        35.359344244003296,
+                        35.333078145980835,
+                        35.911521196365356,
+                        36.00742840766907,
+                        35.73309803009033,
+                        35.826233863830566,
+                        35.98986291885376,
+                        35.90868854522705
+                    ],
+                    "mining": [
+                        34.31507635116577,
+                        33.80473017692566,
+                        33.57690978050232,
+                        33.457759380340576,
+                        33.38518524169922,
+                        32.90077590942383,
+                        32.83466029167175,
+                        33.55729269981384,
+                        32.651161432266235,
+                        32.89111661911011
+                    ]
+                },
+                "mix": {
+                    "idle": [
+                        44.7662878036499,
+                        45.408097982406616,
+                        44.35132455825806,
+                        44.8454806804657,
+                        44.77558922767639,
+                        44.96620988845825,
+                        45.720057249069214
+                    ],
+                    "stream": [
+                        46.2709641456604,
+                        46.34115123748779,
+                        45.89597678184509,
+                        45.5423367023468,
+                        47.2876398563385,
+                        45.88992381095886
+                    ],
+                    "game": [
+                        50.889039754867554,
+                        51.708317279815674,
+                        51.853259325027466,
+                        51.754454612731934,
+                        51.64550447463989,
+                        52.66724634170532,
+                        51.62872266769409,
+                        51.148754358291626,
+                        52.16579580307007,
+                        52.326412200927734
+                    ],
+                    "augmented_reality": [
+                        60.22958421707153,
+                        60.42949175834656,
+                        60.12598729133606,
+                        59.464075803756714,
+                        59.684778451919556,
+                        52.4649224281311
+                    ],
+                    "mining": [
+                        64.96066689491272,
+                        63.622254371643066,
+                        63.61285877227783,
+                        63.65907025337219,
+                        63.58920216560364,
+                        63.403178215026855,
+                        64.2697343826294,
+                        65.44227480888367,
+                        64.05459761619568,
+                        63.979249477386475
+                    ]
+                }
+            },
+            "tasks": {
+                "cpu": {
+                    "idle": [
+                        130.38024616241455,
+                        130.58453822135925,
+                        128.63985991477966,
+                        128.4629716873169,
+                        129.32361006736755
+                    ],
+                    "stream": [
+                        126.56980109214783,
+                        132.02909302711487,
+                        129.37017250061035,
+                        130.57595443725586,
+                        132.16074347496033
+                    ],
+                    "game": [
+                        134.3220820426941,
+                        133.6572151184082,
+                        137.74064683914185,
+                        134.15026187896729,
+                        135.71193265914917
+                    ],
+                    "augmented_reality": [
+                        169.5506193637848,
+                        169.7469663619995,
+                        168.41148114204407,
+                        168.88200616836548,
+                        169.6610939502716
+                    ],
+                    "mining": [
+                        167.1175503730774,
+                        181.8354012966156,
+                        182.83962225914001,
+                        181.16882348060608,
+                        181.89519429206848
+                    ]
+                },
+                "mem": {
+                    "idle": [
+                        98.34345436096191,
+                        107.97504210472107,
+                        89.38921523094177,
+                        95.19105672836304,
+                        90.04748392105103
+                    ],
+                    "stream": [
+                        125.113112449646,
+                        110.50168800354004,
+                        101.65670657157898,
+                        96.70345067977905,
+                        88.80611443519592
+                    ],
+                    "game": [
+                        102.9196355342865,
+                        107.14613580703735,
+                        130.09057068824768,
+                        112.04675245285034,
+                        128.59147334098816
+                    ],
+                    "augmented_reality": [
+                        105.28846526145935,
+                        104.03740739822388,
+                        112.31911754608154,
+                        141.89336109161377,
+                        103.00564813613892
+                    ],
+                    "mining": [
+                        96.28004312515259,
+                        118.17322635650635,
+                        97.76813197135925,
+                        125.14788007736206,
+                        100.29316067695618
+                    ]
+                },
+                "net": {
+                    "idle": [
+                        157.98160910606384,
+                        155.3649230003357,
+                        158.19845581054688
+                    ],
+                    "stream": [
+                        160.24950289726257,
+                        157.4444444179535,
+                        157.6217851638794
+                    ],
+                    "game": [
+                        168.76687741279602,
+                        170.98900151252747,
+                        168.34208416938782,
+                        168.8671109676361
+                    ],
+                    "augmented_reality": [
+                        174.64074850082397
+                    ],
+                    "mining": [
+                        161.66475296020508,
+                        160.63260197639465,
+                        161.75034856796265
+                    ]
+                },
+                "mix": {
+                    "idle": [],
+                    "stream": [],
+                    "game": [],
+                    "augmented_reality": [],
+                    "mining": []
+                }
+            }
+        },
+        "192.168.0.216": {
+            "name": "pi",
+            "device_type": "RPi",
+            "username": "RPi4B4GB",
+            "setup": {
+                "data": {
+                    "dataset_name": null,
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream",
+                        "mining"
+                    ],
+                    "manual": false,
+                    "FREQ": 1800,
+                    "BW": 12000,
+                    "TYPE": "test",
+                    "NAME": "benchmarks",
+                    "data_DURATION": 43200,
+                    "chunk_size": 60,
+                    "max_chunk_mult": 4,
+                    "interval": 5,
+                    "powerMode": 0,
+                    "realtime_drudge_DURATION": 10000
+                },
+                "models": {
+                    "hdp_hsmm": {
+                        "extra_states": [
+                            1,
+                            2
+                        ],
+                        "kappa": [
+                            0.05,
+                            0.1
+                        ],
+                        "progprint": [
+                            800
+                        ],
+                        "train_count_limit": 3,
+                        "model_name": null
+                    },
+                    "hbled": {
+                        "neuron_mult": 1,
+                        "lr_itr": 0.001,
+                        "num_epoch_itr": 10,
+                        "val_split": 0.8,
+                        "model_name": null
+                    },
+                    "input-output": {
+                        "features": [
+                            "cpu_times_user_state_diff",
+                            "cpu_times_system_state_diff",
+                            "memory_percent_state",
+                            "net_sent_diff"
+                        ],
+                        "features_name": "cpu_memory_state_net",
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "lookback": 10,
+                        "predicton_steps": 1,
+                        "split_ratio": 0.7
+                    },
+                    "standard_labels": {
+                        "idle": 0,
+                        "stream": 1,
+                        "game": 2,
+                        "augmented_reality": 3,
+                        "mining": 4
+                    },
+                    "inverted_standard_labels": {
+                        "0": "idle",
+                        "1": "stream",
+                        "2": "game",
+                        "3": "augmented_reality",
+                        "4": "mining"
+                    }
+                },
+                "benchmarks": {
+                    "cpu": {
+                        "array_size": 1500,
+                        "iterations": 30
+                    },
+                    "mem": {
+                        "array_size": 100000000,
+                        "iterations": 1
+                    },
+                    "net": {
+                        "data_size": 2000000,
+                        "iterations": 100
+                    },
+                    "mix": {
+                        "mat_size": 1500,
+                        "mat_iterations": 30,
+                        "mem_array_size": 100000000,
+                        "mem_iterations": 1,
+                        "network_data_size": 2000000,
+                        "network_iterations": 60
+                    }
+                },
+                "tasks": {
+                    "cpu": {
+                        "array_size": 1500,
+                        "iterations": 150
+                    },
+                    "mem": {
+                        "array_size": 100000000,
+                        "iterations": 5
+                    },
+                    "net": {
+                        "data_size": 2000000,
+                        "iterations": 500
+                    },
+                    "mix": {
+                        "mat_size": 1500,
+                        "mat_iterations": 150,
+                        "mem_array_size": 100000000,
+                        "mem_iterations": 5,
+                        "network_data_size": 2000000,
+                        "network_iterations": 300
+                    }
+                }
+            },
+            "datasets": {
+                "RPi4B4GB_1800_res_usage_data_random_dev1_86400sec": {
+                    "FREQ": 1800,
+                    "powerMode": null,
+                    "TYPE": "random",
+                    "NAME": "dev1",
+                    "data_DURATION": 86400,
+                    "chunk_size": 60,
+                    "max_chunk_mult": 2,
+                    "interval": 5
+                },
+                "RPi4B4GB_1800_res_usage_data_random_proceed_7200sec": {
+                    "FREQ": 1800,
+                    "powerMode": 0,
+                    "TYPE": "random",
+                    "NAME": "proceed",
+                    "data_DURATION": 7200,
+                    "chunk_size": 60,
+                    "max_chunk_mult": 5,
+                    "interval": 5
+                },
+                "RPi4B4GB_1800_res_usage_data_random_proceed_43200sec": {
+                    "FREQ": 1800,
+                    "powerMode": 0,
+                    "TYPE": "random",
+                    "NAME": "proceed",
+                    "data_DURATION": 7200,
+                    "chunk_size": 120,
+                    "max_chunk_mult": 5,
+                    "interval": 5
+                },
+                "RPi4B4GB_1800_res_usage_data_random_no_mining_21600sec": {
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream"
+                    ],
+                    "FREQ": 1800,
+                    "powerMode": 0,
+                    "TYPE": "random",
+                    "NAME": "no_mining",
+                    "data_DURATION": 21600,
+                    "chunk_size": 120,
+                    "max_chunk_mult": 4,
+                    "interval": 5
+                },
+                "RPi4B4GB_1800_res_usage_data_random_proceed_30000sec": {
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream",
+                        "mining"
+                    ],
+                    "FREQ": 1800,
+                    "powerMode": 0,
+                    "TYPE": "random",
+                    "NAME": "proceed",
+                    "data_DURATION": 30000,
+                    "chunk_size": 120,
+                    "max_chunk_mult": 4,
+                    "interval": 5
+                },
+                "RPi4B4GB_1800_res_usage_data_random_no_mining_30000sec": {
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream"
+                    ],
+                    "FREQ": 1800,
+                    "powerMode": 0,
+                    "TYPE": "random",
+                    "NAME": "no_mining",
+                    "data_DURATION": 30000,
+                    "chunk_size": 60,
+                    "max_chunk_mult": 4,
+                    "interval": 5
+                },
+                "RPi4B4GB_1800_12000_res_usage_data_pattern_bandwidth_43200sec": {
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream",
+                        "mining"
+                    ],
+                    "FREQ": 1800,
+                    "powerMode": 1,
+                    "BW": 12000,
+                    "TYPE": "pattern",
+                    "NAME": "bandwidth",
+                    "data_DURATION": 43200,
+                    "chunk_size": 120,
+                    "max_chunk_mult": 4,
+                    "interval": 5
+                }
+            },
+            "models": {
+                "hdp_hsmm": {
+                    "RPi4B4GB_1800_res_usage_data_random_test_43200sec_cpu_memory_percent_NoFilter": {
+                        "features": [
+                            "cpu",
+                            "memory"
+                        ],
+                        "features_name": "cpu_memory_percent",
+                        "FREQ": 1800,
+                        "powerMode": 0,
+                        "TYPE": "random",
+                        "NAME": "test",
+                        "data_DURATION": 43200,
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "Labels": null,
+                        "parameters": {
+                            "extra": 2,
+                            "kap": 0.05,
+                            "iter": 800
+                        },
+                        "metrics": null
+                    }
+                },
+                "hbled": {
+                    "RPi4B4GB_1800_res_usage_data_random_proceed_7200sec_cpu_memory_state_net_sent_NoFilter_200Lookback_10Step": {
+                        "features": [
+                            "cpu_times_user_state_diff",
+                            "cpu_times_system_state_diff",
+                            "memory_percent_state",
+                            "net_sent_diff"
+                        ],
+                        "features_name": "cpu_memory_state_net_sent",
+                        "FREQ": 1800,
+                        "powerMode": 0,
+                        "TYPE": "random",
+                        "NAME": "proceed",
+                        "data_DURATION": 7200,
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "Labels": null,
+                        "neuron_mult": 2,
+                        "lr_itr": 1e-05,
+                        "num_epoch_itr": 25,
+                        "val_split": 0.8,
+                        "lookback": 200,
+                        "predicton_steps": 10,
+                        "metrics": null
+                    },
+                    "neuron_mult": 2,
+                    "lr_itr": 1e-05,
+                    "num_epoch_itr": 25,
+                    "RPi4B4GB_1800_res_usage_data_random_no_mining_30000sec_cpu_memory_state_NoFilter_50Lookback_5Step": {
+                        "states": [
+                            "idle",
+                            "augmented_reality",
+                            "game",
+                            "stream"
+                        ],
+                        "features": [
+                            "cpu_times_user_state",
+                            "cpu_times_system_state",
+                            "memory_percent_state"
+                        ],
+                        "features_name": "cpu_memory_state",
+                        "FREQ": 1800,
+                        "powerMode": 0,
+                        "TYPE": "random",
+                        "NAME": "no_mining",
+                        "data_DURATION": 30000,
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "Labels": {
+                            "idle": 0,
+                            "stream": 1,
+                            "game": 2,
+                            "augmented_reality": 3,
+                            "mining": 4
+                        },
+                        "neuron_mult": 1,
+                        "lr_itr": 1e-05,
+                        "num_epoch_itr": 25,
+                        "val_split": 0.8,
+                        "lookback": 50,
+                        "predicton_steps": 5,
+                        "metrics": [
+                            {
+                                "Key": "cpu_times_user_state",
+                                "Model Name": "RPi4B4GB_1800_res_usage_data_random_no_mining_30000sec_cpu_memory_state_NoFilter_50Lookback_5Step",
+                                "Filter": "NoFilter",
+                                "Order": null,
+                                "Lookback": 50,
+                                "Step": 5,
+                                "Training Time": 3098.31329369545,
+                                "Mean Inference Time": 0.25599095774041186,
+                                "Max Inference Time": 3.404935121536255,
+                                "Min Inference Time": 0.22074198722839355,
+                                "Score": -0.368,
+                                "RMSE": 12204.469,
+                                "MAE": 8534.874,
+                                "MAPE": 126.27,
+                                "SMAPE": 150.19
+                            },
+                            {
+                                "Key": "cpu_times_system_state",
+                                "Model Name": "RPi4B4GB_1800_res_usage_data_random_no_mining_30000sec_cpu_memory_state_NoFilter_50Lookback_5Step",
+                                "Filter": "NoFilter",
+                                "Order": null,
+                                "Lookback": 50,
+                                "Step": 5,
+                                "Training Time": 3098.31329369545,
+                                "Mean Inference Time": 0.25599095774041186,
+                                "Max Inference Time": 3.404935121536255,
+                                "Min Inference Time": 0.22074198722839355,
+                                "Score": -0.387,
+                                "RMSE": 1755.977,
+                                "MAE": 1220.917,
+                                "MAPE": 133.6,
+                                "SMAPE": 156.12
+                            },
+                            {
+                                "Key": "memory_percent_state",
+                                "Model Name": "RPi4B4GB_1800_res_usage_data_random_no_mining_30000sec_cpu_memory_state_NoFilter_50Lookback_5Step",
+                                "Filter": "NoFilter",
+                                "Order": null,
+                                "Lookback": 50,
+                                "Step": 5,
+                                "Training Time": 3098.31329369545,
+                                "Mean Inference Time": 0.25599095774041186,
+                                "Max Inference Time": 3.404935121536255,
+                                "Min Inference Time": 0.22074198722839355,
+                                "Score": 0.031,
+                                "RMSE": 8.794,
+                                "MAE": 5.762,
+                                "MAPE": 61.08,
+                                "SMAPE": 53.81
+                            },
+                            {
+                                "Key": "label",
+                                "Model Name": "RPi4B4GB_1800_res_usage_data_random_no_mining_30000sec_cpu_memory_state_NoFilter_50Lookback_5Step",
+                                "Filter": "NoFilter",
+                                "Order": null,
+                                "Lookback": 50,
+                                "Step": 5,
+                                "Training Time": 3098.31329369545,
+                                "Mean Inference Time": 0.25599095774041186,
+                                "Max Inference Time": 3.404935121536255,
+                                "Min Inference Time": 0.22074198722839355,
+                                "Accuracy": 0.4645006016847172,
+                                "Precision": 0.44605022632866814,
+                                "Recall": 0.47070288942459887,
+                                "F1-Score": 0.42421797193670907,
+                                "Accuracy per Step": [
+                                    0.47352587244283995,
+                                    0.5060168471720818,
+                                    0.4675090252707581,
+                                    0.4566787003610108,
+                                    0.4187725631768953
+                                ],
+                                "Precision per Step": [
+                                    0.3945822863273628,
+                                    0.4905038007225599,
+                                    0.466343149711656,
+                                    0.4716644935880154,
+                                    0.40715740129374633
+                                ],
+                                "Recall per Step": [
+                                    0.4786478759593358,
+                                    0.509433576023133,
+                                    0.4739054679101655,
+                                    0.46071169287646263,
+                                    0.4308158343538975
+                                ],
+                                "F1-Score model_nameper Step": [
+                                    0.40475035011535565,
+                                    0.46994937293740907,
+                                    0.4378859080919214,
+                                    0.42385589756106856,
+                                    0.3846483309777905
+                                ]
+                            }
+                        ]
+                    },
+                    "RPi4B4GB_1800_12000_res_usage_data_pattern_bandwidth_43200sec_cpu_memory_state_net_NoFilter_50Lookback_2Step": {
+                        "states": [
+                            "idle",
+                            "augmented_reality",
+                            "game",
+                            "stream",
+                            "mining"
+                        ],
+                        "features": [
+                            "cpu_times_user_state_diff",
+                            "cpu_times_system_state_diff",
+                            "memory_percent_state",
+                            "net_sent_diff"
+                        ],
+                        "features_name": "cpu_memory_state_net",
+                        "FREQ": 1800,
+                        "powerMode": 1,
+                        "BW": 12000,
+                        "TYPE": "pattern",
+                        "NAME": "bandwidth",
+                        "data_DURATION": 43200,
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "Labels": {
+                            "idle": 0,
+                            "stream": 1,
+                            "game": 2,
+                            "augmented_reality": 3,
+                            "mining": 4
+                        },
+                        "neuron_mult": 1,
+                        "lr_itr": 0.0001,
+                        "num_epoch_itr": 20,
+                        "val_split": 0.8,
+                        "lookback": 50,
+                        "predicton_steps": 2,
+                        "metrics": null
+                    }
+                }
+            },
+            "benchmarks": {
+                "cpu": {
+                    "idle": [
+                        43.4471538066864,
+                        60.560641288757324,
+                        25.424787282943726,
+                        25.34719753265381,
+                        25.17161750793457,
+                        26.3080997467041,
+                        25.1897394657135,
+                        25.183653116226196,
+                        25.199214696884155,
+                        25.06999969482422
+                    ],
+                    "stream": [
+                        25.642837047576904,
+                        25.40258765220642,
+                        25.217185258865356,
+                        24.843920707702637,
+                        25.117077112197876,
+                        25.56137752532959,
+                        24.869964361190796,
+                        24.816158533096313,
+                        25.008445262908936,
+                        25.119770050048828
+                    ],
+                    "game": [
+                        31.942816734313965,
+                        30.950465202331543,
+                        30.43883967399597,
+                        31.3373281955719,
+                        31.352582931518555,
+                        31.501265287399292,
+                        31.31495428085327,
+                        31.756831884384155,
+                        31.61369013786316,
+                        30.458096265792847
+                    ],
+                    "augmented_reality": [
+                        34.82967281341553,
+                        34.48868203163147,
+                        33.42316794395447,
+                        37.452104568481445,
+                        35.53199005126953,
+                        35.05280876159668,
+                        34.385127782821655,
+                        33.966638803482056,
+                        35.42325305938721,
+                        35.27012014389038
+                    ],
+                    "mining": [
+                        38.79848527908325,
+                        38.948042154312134,
+                        39.950180530548096,
+                        38.92051863670349,
+                        39.173668384552,
+                        39.32043433189392,
+                        39.13714933395386,
+                        40.154999017715454,
+                        39.74471044540405,
+                        39.39846229553223
+                    ]
+                },
+                "mem": {
+                    "idle": [
+                        28.18618679046631,
+                        28.108524799346924,
+                        27.893383264541626,
+                        27.67849636077881,
+                        27.865772008895874,
+                        27.77970290184021,
+                        28.042954683303833,
+                        27.620628118515015,
+                        27.74967336654663,
+                        27.56204080581665
+                    ],
+                    "stream": [
+                        28.491065979003906,
+                        28.649251222610474,
+                        28.51978635787964,
+                        28.456759929656982,
+                        28.42719078063965,
+                        28.372451066970825,
+                        28.387746810913086,
+                        28.371559619903564,
+                        38.14220213890076,
+                        28.405819177627563
+                    ],
+                    "game": [
+                        31.404335737228394,
+                        31.273056268692017,
+                        30.282276391983032,
+                        30.80784296989441,
+                        30.42240333557129,
+                        30.715392589569092,
+                        30.7844877243042,
+                        30.693702697753906,
+                        30.713549613952637,
+                        30.875622987747192
+                    ],
+                    "augmented_reality": [
+                        104.4463152885437,
+                        30.579387426376343,
+                        188.25229001045227,
+                        30.924975156784058,
+                        30.19963264465332,
+                        30.18396496772766,
+                        30.42525029182434,
+                        30.652639627456665,
+                        30.297300577163696,
+                        29.944056510925293
+                    ],
+                    "mining": [
+                        30.904397010803223,
+                        29.91894507408142,
+                        29.958225965499878,
+                        30.08030104637146,
+                        30.19651961326599,
+                        29.822644233703613,
+                        29.706055879592896,
+                        29.37275743484497,
+                        30.278260231018066,
+                        29.632018327713013
+                    ]
+                },
+                "net": {
+                    "idle": [
+                        33.468127489089966,
+                        34.77217364311218,
+                        32.779075145721436,
+                        32.70630478858948,
+                        34.49641680717468,
+                        32.78036832809448,
+                        33.28748965263367,
+                        35.30070185661316,
+                        32.28751015663147,
+                        35.115933656692505
+                    ],
+                    "stream": [
+                        32.062201738357544,
+                        32.58399295806885,
+                        33.29707741737366,
+                        32.30799198150635,
+                        32.74628782272339,
+                        34.84941363334656,
+                        35.264477252960205,
+                        34.871777057647705,
+                        35.56687879562378,
+                        33.456543922424316
+                    ],
+                    "game": [
+                        39.45349431037903,
+                        39.84669733047485,
+                        38.93560457229614,
+                        36.088200092315674,
+                        38.188007831573486,
+                        38.33764314651489,
+                        38.09833550453186,
+                        36.64248490333557,
+                        36.10071778297424,
+                        39.22370886802673
+                    ],
+                    "augmented_reality": [
+                        37.57613921165466,
+                        38.02065348625183,
+                        37.95151114463806,
+                        49.03154277801514,
+                        37.81203651428223,
+                        37.71257448196411,
+                        37.90268659591675,
+                        36.275742053985596,
+                        35.58670783042908,
+                        37.86305522918701
+                    ],
+                    "mining": [
+                        33.267598390579224,
+                        32.71156144142151,
+                        35.442445516586304,
+                        34.942890644073486,
+                        32.84599328041077,
+                        34.68046760559082,
+                        32.76971077919006,
+                        32.98582339286804,
+                        35.16635823249817,
+                        32.9372992515564
+                    ]
+                },
+                "mix": {
+                    "idle": [
+                        48.786914110183716,
+                        47.7284209728241,
+                        49.01303815841675,
+                        49.123831033706665,
+                        49.72547888755798,
+                        48.449294328689575,
+                        49.9758141040802,
+                        48.319252252578735,
+                        48.915011167526245,
+                        49.02550148963928
+                    ],
+                    "stream": [
+                        48.659693002700806,
+                        48.80373978614807,
+                        51.27186822891235,
+                        49.740901470184326,
+                        48.861390829086304
+                    ],
+                    "game": [
+                        62.34809947013855,
+                        61.66293811798096,
+                        59.43140935897827,
+                        61.68654489517212,
+                        59.564295291900635,
+                        60.34310460090637,
+                        61.085277795791626,
+                        415.40200090408325
+                    ],
+                    "augmented_reality": [
+                        64.06763911247253,
+                        66.96387672424316,
+                        65.91784858703613
+                    ],
+                    "mining": [
+                        67.744863986969,
+                        68.05616354942322,
+                        69.4583649635315,
+                        69.99622941017151,
+                        71.5799720287323,
+                        71.56395721435547,
+                        69.58184623718262,
+                        69.95180320739746,
+                        70.91058659553528
+                    ]
+                }
+            },
+            "tasks": {
+                "cpu": {
+                    "idle": [
+                        113.54527139663696,
+                        113.87833619117737,
+                        114.24031281471252,
+                        113.05015802383423,
+                        114.05816173553467
+                    ],
+                    "stream": [
+                        118.51168489456177,
+                        214.65511226654053,
+                        118.75229978561401,
+                        118.77354693412781,
+                        118.80178785324097
+                    ],
+                    "game": [
+                        140.3363699913025,
+                        139.88839983940125,
+                        138.54274106025696,
+                        139.38675713539124,
+                        141.37715888023376
+                    ],
+                    "augmented_reality": [
+                        149.87568831443787,
+                        149.7139072418213,
+                        152.0653886795044,
+                        150.63249683380127,
+                        153.05967736244202
+                    ],
+                    "mining": [
+                        168.11994743347168,
+                        175.39884543418884,
+                        176.2068109512329,
+                        176.11227226257324,
+                        177.53651523590088
+                    ]
+                },
+                "mem": {
+                    "idle": [
+                        94.74543952941895,
+                        98.13463258743286,
+                        87.51031303405762,
+                        111.64353275299072,
+                        95.79197406768799
+                    ],
+                    "stream": [
+                        343.1443841457367,
+                        99.15785908699036,
+                        87.98214912414551,
+                        86.92567920684814,
+                        106.74942588806152
+                    ],
+                    "game": [
+                        103.65950775146484,
+                        99.86702489852905,
+                        113.78850984573364,
+                        110.58589935302734,
+                        97.31629848480225
+                    ],
+                    "augmented_reality": [
+                        108.4397714138031,
+                        96.88326072692871,
+                        116.81253576278687,
+                        117.77399110794067,
+                        102.76884055137634
+                    ],
+                    "mining": [
+                        114.7262933254242,
+                        103.1299033164978,
+                        119.52997732162476,
+                        110.78568625450134,
+                        119.53410339355469
+                    ]
+                },
+                "net": {
+                    "idle": [
+                        165.75181078910828,
+                        165.4155559539795,
+                        160.73587584495544,
+                        163.61750292778015,
+                        163.26182508468628
+                    ],
+                    "stream": [
+                        162.65573000907898,
+                        163.83739733695984
+                    ],
+                    "game": [
+                        185.3908896446228,
+                        186.22909426689148,
+                        180.38921189308167
+                    ],
+                    "augmented_reality": [
+                        174.6450080871582,
+                        174.4435555934906,
+                        175.79956889152527
+                    ],
+                    "mining": [
+                        165.26592803001404,
+                        165.45348715782166
+                    ]
+                },
+                "mix": {
+                    "idle": [
+                        180.62999987602234
+                    ],
+                    "stream": [],
+                    "game": [],
+                    "augmented_reality": [],
+                    "mining": []
+                }
+            }
+        },
+        "192.168.0.197": {
+            "name": "tlr",
+            "device_type": "Nano",
+            "username": "nano",
+            "setup": {
+                "data": {
+                    "dataset_name": null,
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream",
+                        "mining"
+                    ],
+                    "manual": false,
+                    "FREQ": 1800,
+                    "BW": 12000,
+                    "TYPE": "test",
+                    "NAME": "benchmarks",
+                    "data_DURATION": 43200,
+                    "chunk_size": 60,
+                    "max_chunk_mult": 4,
+                    "interval": 5,
+                    "powerMode": 0,
+                    "realtime_drudge_DURATION": 10000
+                },
+                "models": {
+                    "hdp_hsmm": {
+                        "extra_states": [
+                            1,
+                            2
+                        ],
+                        "kappa": [
+                            0.05,
+                            0.1
+                        ],
+                        "progprint": [
+                            800
+                        ],
+                        "train_count_limit": 3,
+                        "model_name": null
+                    },
+                    "hbled": {
+                        "neuron_mult": 1,
+                        "lr_itr": 0.001,
+                        "num_epoch_itr": 10,
+                        "val_split": 0.8,
+                        "model_name": null
+                    },
+                    "input-output": {
+                        "features": [
+                            "cpu_times_user_state_diff",
+                            "cpu_times_system_state_diff",
+                            "memory_percent_state",
+                            "net_sent_diff"
+                        ],
+                        "features_name": "cpu_memory_state_net",
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "lookback": 10,
+                        "predicton_steps": 1,
+                        "split_ratio": 0.7
+                    },
+                    "standard_labels": {
+                        "idle": 0,
+                        "stream": 1,
+                        "game": 2,
+                        "augmented_reality": 3,
+                        "mining": 4
+                    },
+                    "inverted_standard_labels": {
+                        "0": "idle",
+                        "1": "stream",
+                        "2": "game",
+                        "3": "augmented_reality",
+                        "4": "mining"
+                    }
+                },
+                "benchmarks": {
+                    "cpu": {
+                        "array_size": 1500,
+                        "iterations": 30
+                    },
+                    "mem": {
+                        "array_size": 100000000,
+                        "iterations": 1
+                    },
+                    "net": {
+                        "data_size": 2000000,
+                        "iterations": 100
+                    },
+                    "mix": {
+                        "mat_size": 1500,
+                        "mat_iterations": 30,
+                        "mem_array_size": 100000000,
+                        "mem_iterations": 1,
+                        "network_data_size": 2000000,
+                        "network_iterations": 60
+                    }
+                }
+            },
+            "datasets": {
+                "nano_0_res_usage_data_random_dev1_86400sec": {
+                    "FREQ": null,
+                    "powerMode": 0,
+                    "TYPE": "random",
+                    "NAME": "dev1",
+                    "data_DURATION": 86400,
+                    "chunk_size": 60,
+                    "max_chunk_mult": 2,
+                    "interval": 5
+                },
+                "nano_0_res_usage_data_test_yeet_300sec": {
+                    "FREQ": null,
+                    "powerMode": 0,
+                    "TYPE": "test",
+                    "NAME": "yeet",
+                    "data_DURATION": 300,
+                    "chunk_size": 60,
+                    "max_chunk_mult": 3,
+                    "interval": 5
+                },
+                "nano_0_res_usage_data_test_yeet2_300sec": {
+                    "FREQ": null,
+                    "powerMode": 0,
+                    "TYPE": "test",
+                    "NAME": "yeet2",
+                    "data_DURATION": 300,
+                    "chunk_size": 60,
+                    "max_chunk_mult": 3,
+                    "interval": 5
+                },
+                "nano_0_res_usage_data_test_yeet3_1200sec": {
+                    "FREQ": null,
+                    "powerMode": 0,
+                    "TYPE": "test",
+                    "NAME": "yeet3",
+                    "data_DURATION": 1200,
+                    "chunk_size": 60,
+                    "max_chunk_mult": 3,
+                    "interval": 5
+                },
+                "nano_0_res_usage_data_random_proceed_7200sec": {
+                    "FREQ": 1800,
+                    "powerMode": 0,
+                    "TYPE": "random",
+                    "NAME": "proceed",
+                    "data_DURATION": 7200,
+                    "chunk_size": 60,
+                    "max_chunk_mult": 5,
+                    "interval": 5
+                },
+                "nano_0_res_usage_data_random_proceed_43200sec": {
+                    "FREQ": 1800,
+                    "powerMode": 0,
+                    "TYPE": "random",
+                    "NAME": "proceed",
+                    "data_DURATION": 43200,
+                    "chunk_size": 120,
+                    "max_chunk_mult": 5,
+                    "interval": 5
+                },
+                "nano_0_res_usage_data_random_no_mining_21600sec": {
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream"
+                    ],
+                    "FREQ": 1800,
+                    "powerMode": 0,
+                    "TYPE": "random",
+                    "NAME": "no_mining",
+                    "data_DURATION": 21600,
+                    "chunk_size": 120,
+                    "max_chunk_mult": 4,
+                    "interval": 5
+                },
+                "tlr_0_res_usage_data_random_proceed_30000sec": {
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream",
+                        "mining"
+                    ],
+                    "FREQ": 1800,
+                    "powerMode": 0,
+                    "TYPE": "random",
+                    "NAME": "proceed",
+                    "data_DURATION": 30000,
+                    "chunk_size": 120,
+                    "max_chunk_mult": 4,
+                    "interval": 5
+                },
+                "nano_0_res_usage_data_random_no_mining_30000sec": {
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream"
+                    ],
+                    "FREQ": 1800,
+                    "powerMode": 0,
+                    "TYPE": "random",
+                    "NAME": "no_mining",
+                    "data_DURATION": 30000,
+                    "chunk_size": 60,
+                    "max_chunk_mult": 4,
+                    "interval": 5
+                },
+                "nano_0_5000_res_usage_data_test_bandwidth_300sec": {
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream",
+                        "mining"
+                    ],
+                    "FREQ": 1800,
+                    "powerMode": 0,
+                    "BW": 5000,
+                    "TYPE": "test",
+                    "NAME": "bandwidth",
+                    "data_DURATION": 300,
+                    "chunk_size": 120,
+                    "max_chunk_mult": 4,
+                    "interval": 5
+                },
+                "nano_1_12000_res_usage_data_pattern_bandwidth_43200sec": {
+                    "states": [
+                        "idle",
+                        "augmented_reality",
+                        "game",
+                        "stream",
+                        "mining"
+                    ],
+                    "FREQ": 1800,
+                    "powerMode": 1,
+                    "BW": 12000,
+                    "TYPE": "pattern",
+                    "NAME": "bandwidth",
+                    "data_DURATION": 43200,
+                    "chunk_size": 120,
+                    "max_chunk_mult": 4,
+                    "interval": 5
+                }
+            },
+            "models": {
+                "hdp_hsmm": {
+                    "nano_0_res_usage_data_random_test_43200sec_cpu_memory_percent_NoFilter": {
+                        "features": [
+                            "cpu",
+                            "memory"
+                        ],
+                        "features_name": "cpu_memory_percent",
+                        "FREQ": 1800,
+                        "powerMode": 0,
+                        "TYPE": "random",
+                        "NAME": "test",
+                        "data_DURATION": 43200,
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "Labels": null,
+                        "parameters": {
+                            "extra": 2,
+                            "kap": 0.05,
+                            "iter": 800
+                        },
+                        "metrics": null
+                    }
+                },
+                "hbled": {
+                    "nano_0_res_usage_data_random_proceed_7200sec_cpu_memory_state_net_sent_NoFilter_200Lookback_10Step": {
+                        "features": [
+                            "cpu_times_user_state_diff",
+                            "cpu_times_system_state_diff",
+                            "memory_percent_state",
+                            "net_sent_diff"
+                        ],
+                        "features_name": "cpu_memory_state_net_sent",
+                        "FREQ": 1800,
+                        "powerMode": 0,
+                        "TYPE": "random",
+                        "NAME": "proceed",
+                        "data_DURATION": 7200,
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "Labels": null,
+                        "neuron_mult": 2,
+                        "lr_itr": 1e-05,
+                        "num_epoch_itr": 25,
+                        "val_split": 0.8,
+                        "lookback": 200,
+                        "predicton_steps": 10,
+                        "metrics": null
+                    },
+                    "neuron_mult": 2,
+                    "lr_itr": 1e-05,
+                    "num_epoch_itr": 25,
+                    "nano_0_res_usage_data_random_no_mining_30000sec_cpu_memory_state_NoFilter_50Lookback_5Step": {
+                        "states": [
+                            "idle",
+                            "augmented_reality",
+                            "game",
+                            "stream"
+                        ],
+                        "features": [
+                            "cpu_times_user_state",
+                            "cpu_times_system_state",
+                            "memory_percent_state"
+                        ],
+                        "features_name": "cpu_memory_state",
+                        "FREQ": 1800,
+                        "powerMode": 0,
+                        "TYPE": "random",
+                        "NAME": "no_mining",
+                        "data_DURATION": 30000,
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "Labels": {
+                            "idle": 0,
+                            "stream": 1,
+                            "game": 2,
+                            "augmented_reality": 3,
+                            "mining": 4
+                        },
+                        "neuron_mult": 1,
+                        "lr_itr": 1e-05,
+                        "num_epoch_itr": 25,
+                        "val_split": 0.8,
+                        "lookback": 50,
+                        "predicton_steps": 5,
+                        "metrics": [
+                            {
+                                "Key": "cpu_times_user_state",
+                                "Model Name": "nano_0_res_usage_data_random_no_mining_30000sec_cpu_memory_state_NoFilter_50Lookback_5Step",
+                                "Filter": "NoFilter",
+                                "Order": null,
+                                "Lookback": 50,
+                                "Step": 5,
+                                "Training Time": 2918.765218734741,
+                                "Mean Inference Time": 0.273982216194632,
+                                "Max Inference Time": 3.8430583477020264,
+                                "Min Inference Time": 0.24567747116088867,
+                                "Score": 0.001,
+                                "RMSE": 1011177.301,
+                                "MAE": 82157.745,
+                                "MAPE": 213.14,
+                                "SMAPE": 157.62
+                            },
+                            {
+                                "Key": "cpu_times_system_state",
+                                "Model Name": "nano_0_res_usage_data_random_no_mining_30000sec_cpu_memory_state_NoFilter_50Lookback_5Step",
+                                "Filter": "NoFilter",
+                                "Order": null,
+                                "Lookback": 50,
+                                "Step": 5,
+                                "Training Time": 2918.765218734741,
+                                "Mean Inference Time": 0.273982216194632,
+                                "Max Inference Time": 3.8430583477020264,
+                                "Min Inference Time": 0.24567747116088867,
+                                "Score": -0.002,
+                                "RMSE": 155843.763,
+                                "MAE": 13476.171,
+                                "MAPE": 159.59,
+                                "SMAPE": 165.77
+                            },
+                            {
+                                "Key": "memory_percent_state",
+                                "Model Name": "nano_0_res_usage_data_random_no_mining_30000sec_cpu_memory_state_NoFilter_50Lookback_5Step",
+                                "Filter": "NoFilter",
+                                "Order": null,
+                                "Lookback": 50,
+                                "Step": 5,
+                                "Training Time": 2918.765218734741,
+                                "Mean Inference Time": 0.273982216194632,
+                                "Max Inference Time": 3.8430583477020264,
+                                "Min Inference Time": 0.24567747116088867,
+                                "Score": -0.005,
+                                "RMSE": 2070.448,
+                                "MAE": 171.78,
+                                "MAPE": 2696720646437630.0,
+                                "SMAPE": 67.17
+                            },
+                            {
+                                "Key": "label",
+                                "Model Name": "nano_0_res_usage_data_random_no_mining_30000sec_cpu_memory_state_NoFilter_50Lookback_5Step",
+                                "Filter": "NoFilter",
+                                "Order": null,
+                                "Lookback": 50,
+                                "Step": 5,
+                                "Training Time": 2918.765218734741,
+                                "Mean Inference Time": 0.273982216194632,
+                                "Max Inference Time": 3.8430583477020264,
+                                "Min Inference Time": 0.24567747116088867,
+                                "Accuracy": 0.34879227053140094,
+                                "Precision": 0.32327061043276,
+                                "Recall": 0.29139707268324044,
+                                "F1-Score": 0.1979880588968405,
+                                "Accuracy per Step": [
+                                    0.3919082125603865,
+                                    0.3309178743961353,
+                                    0.32004830917874394,
+                                    0.3508454106280193,
+                                    0.3502415458937198
+                                ],
+                                "Precision per Step": [
+                                    0.36607394628891443,
+                                    0.20995530785004468,
+                                    0.3762181881798442,
+                                    0.21405228758169936,
+                                    0.4500533222632975
+                                ],
+                                "Recall per Step": [
+                                    0.35024841074398994,
+                                    0.27210898374289005,
+                                    0.2575882429660545,
+                                    0.28813461572587085,
+                                    0.2889051102373969
+                                ],
+                                "F1-Score model_nameper Step": [
+                                    0.2914600764445187,
+                                    0.17327682758979052,
+                                    0.1361333446356884,
+                                    0.19192161576089697,
+                                    0.197148430053308
+                                ]
+                            }
+                        ]
+                    },
+                    "nano_1_12000_res_usage_data_pattern_bandwidth_43200sec_cpu_memory_state_net_NoFilter_50Lookback_2Step": {
+                        "states": [
+                            "idle",
+                            "augmented_reality",
+                            "game",
+                            "stream",
+                            "mining"
+                        ],
+                        "features": [
+                            "cpu_times_user_state_diff",
+                            "cpu_times_system_state_diff",
+                            "memory_percent_state",
+                            "net_sent_diff"
+                        ],
+                        "features_name": "cpu_memory_state_net",
+                        "FREQ": 1800,
+                        "powerMode": 1,
+                        "BW": 12000,
+                        "TYPE": "pattern",
+                        "NAME": "bandwidth",
+                        "data_DURATION": 43200,
+                        "order": null,
+                        "filter_diff": false,
+                        "filter_type": "NoFilter",
+                        "Labels": {
+                            "idle": 0,
+                            "stream": 1,
+                            "game": 2,
+                            "augmented_reality": 3,
+                            "mining": 4
+                        },
+                        "neuron_mult": 1,
+                        "lr_itr": 0.0001,
+                        "num_epoch_itr": 20,
+                        "val_split": 0.8,
+                        "lookback": 50,
+                        "predicton_steps": 2,
+                        "metrics": null
+                    }
+                }
+            },
+            "benchmarks": {
+                "cpu": {
+                    "idle": [
+                        21.84190320968628,
+                        22.021202564239502,
+                        21.585417985916138,
+                        22.486116886138916,
+                        21.696744680404663,
+                        21.88681650161743,
+                        22.035740852355957,
+                        22.517704963684082,
+                        21.747534036636353,
+                        22.493835926055908
+                    ],
+                    "stream": [
+                        31.686384916305542,
+                        25.656493186950684,
+                        22.96512746810913,
+                        24.345701456069946,
+                        23.378032207489014,
+                        21.83818817138672,
+                        22.945207357406616,
+                        22.19759178161621,
+                        22.04645013809204,
+                        22.064513206481934
+                    ],
+                    "game": [
+                        28.890763998031616,
+                        28.979308366775513,
+                        29.89888072013855,
+                        29.063573837280273,
+                        29.899245262145996,
+                        29.102198839187622,
+                        29.511917114257812,
+                        29.753580331802368,
+                        28.008820056915283,
+                        29.17302632331848
+                    ],
+                    "augmented_reality": [
+                        25.127410650253296,
+                        24.86595582962036,
+                        25.36188793182373,
+                        25.357243061065674,
+                        25.0777907371521,
+                        25.48385787010193,
+                        25.14831042289734,
+                        25.336005926132202,
+                        25.334308385849,
+                        25.073267459869385
+                    ],
+                    "mining": [
+                        32.27486538887024,
+                        31.83326816558838,
+                        31.88089346885681,
+                        32.132936000823975,
+                        31.275644063949585,
+                        31.4973783493042,
+                        31.780641078948975,
+                        31.777010917663574,
+                        31.589260578155518,
+                        31.95201587677002
+                    ]
+                },
+                "mem": {
+                    "idle": [
+                        31.397361755371094,
+                        31.375267267227173,
+                        31.488560914993286,
+                        31.38374400138855,
+                        31.363645553588867,
+                        31.40898370742798,
+                        31.43631935119629,
+                        31.411556720733643,
+                        31.29065704345703,
+                        31.49737310409546
+                    ],
+                    "stream": [
+                        33.85742259025574,
+                        31.967753887176514,
+                        31.497209072113037,
+                        31.542330265045166,
+                        31.363433599472046,
+                        31.476873636245728,
+                        31.280627250671387,
+                        31.484081029891968,
+                        31.28200125694275,
+                        31.34186601638794
+                    ],
+                    "game": [
+                        36.24561619758606,
+                        34.329054832458496,
+                        32.99795985221863,
+                        32.989914894104004,
+                        33.791099548339844,
+                        32.69823670387268,
+                        33.09140491485596,
+                        32.40149712562561,
+                        32.50333118438721,
+                        33.14707899093628
+                    ],
+                    "augmented_reality": [
+                        31.777742624282837,
+                        31.743846654891968,
+                        31.68757939338684,
+                        31.897804021835327,
+                        31.799517154693604,
+                        31.902589321136475,
+                        32.02492094039917,
+                        31.855388402938843,
+                        31.573663473129272,
+                        31.968234300613403
+                    ],
+                    "mining": [
+                        34.34719777107239,
+                        34.30463480949402,
+                        33.65311312675476,
+                        34.316330671310425,
+                        34.09878158569336,
+                        34.54336166381836,
+                        34.740368366241455,
+                        34.422985792160034,
+                        34.168240785598755,
+                        34.41925287246704
+                    ]
+                },
+                "net": {
+                    "idle": [
+                        18.769035577774048,
+                        18.682789087295532,
+                        18.717169284820557,
+                        18.772352933883667,
+                        18.832053422927856,
+                        18.680785655975342,
+                        18.66765546798706,
+                        18.68345332145691,
+                        18.649315118789673,
+                        18.641023874282837
+                    ],
+                    "stream": [
+                        18.560582399368286,
+                        18.740203619003296,
+                        18.80891990661621,
+                        18.695920944213867,
+                        18.773938417434692,
+                        18.665594577789307,
+                        18.670085191726685,
+                        18.62905716896057,
+                        18.651174783706665,
+                        18.732218027114868
+                    ],
+                    "game": [
+                        18.923521041870117,
+                        18.73814296722412,
+                        18.822736024856567,
+                        18.893182039260864,
+                        18.89970850944519,
+                        18.70512104034424,
+                        18.92638063430786,
+                        18.682719945907593,
+                        18.856201887130737,
+                        18.56289052963257
+                    ],
+                    "augmented_reality": [
+                        18.828250885009766,
+                        18.789178371429443,
+                        18.75409436225891,
+                        18.77722191810608,
+                        29.398115634918213,
+                        18.87941598892212,
+                        18.73203420639038,
+                        18.825684070587158,
+                        18.847492456436157,
+                        18.723846197128296
+                    ],
+                    "mining": [
+                        18.877272129058838,
+                        18.84817624092102,
+                        18.960906505584717,
+                        18.938635110855103,
+                        29.504194736480713,
+                        18.73709487915039,
+                        18.989598274230957,
+                        18.959768295288086,
+                        18.85394811630249,
+                        18.887945890426636
+                    ]
+                },
+                "mix": {
+                    "idle": [
+                        41.00631618499756,
+                        39.82127380371094,
+                        40.13579034805298,
+                        40.645485639572144,
+                        39.8228325843811,
+                        40.90703511238098,
+                        40.12146520614624,
+                        40.12419533729553,
+                        40.842355251312256,
+                        40.117663621902466
+                    ],
+                    "stream": [
+                        43.34603929519653,
+                        41.01702356338501,
+                        41.5708429813385,
+                        41.82442283630371,
+                        41.19031596183777,
+                        41.49236297607422,
+                        41.27168869972229,
+                        41.565234899520874,
+                        41.1718590259552,
+                        42.914031744003296
+                    ],
+                    "game": [
+                        51.9343843460083,
+                        49.67636251449585,
+                        51.68500876426697,
+                        51.87655997276306,
+                        52.00023126602173,
+                        52.378090620040894,
+                        51.736390829086304,
+                        52.65624928474426
+                    ],
+                    "augmented_reality": [
+                        44.58450269699097,
+                        43.84241580963135,
+                        45.13326025009155,
+                        44.2854905128479,
+                        44.65154552459717,
+                        44.579609870910645,
+                        44.39121103286743,
+                        45.58162546157837,
+                        43.64502215385437,
+                        43.69794321060181
+                    ],
+                    "mining": [
+                        54.545358419418335,
+                        54.26987934112549,
+                        54.01537275314331,
+                        53.90380907058716,
+                        54.60821485519409,
+                        54.30527591705322,
+                        54.56508493423462,
+                        53.994831562042236,
+                        54.312912464141846,
+                        55.109102964401245
+                    ]
+                }
+            },
+            "tasks": {
+                "cpu": {
+                    "idle": [],
+                    "stream": [],
+                    "game": [],
+                    "augmented_reality": [],
+                    "mining": []
+                },
+                "mem": {
+                    "idle": [],
+                    "stream": [],
+                    "game": [],
+                    "augmented_reality": [],
+                    "mining": []
+                },
+                "net": {
+                    "idle": [],
+                    "stream": [],
+                    "game": [],
+                    "augmented_reality": [],
+                    "mining": []
+                },
+                "mix": {
+                    "idle": [],
+                    "stream": [],
+                    "game": [],
+                    "augmented_reality": [],
+                    "mining": []
+                }
+            }
+        }
+    },
+    "data_param_dict": {
+        "drop_list": [
+            "swap_memory",
+            "disk",
+            "wifi_freq",
+            "bit_rate",
+            "net",
+            "link_quality_max"
+        ],
+        "non_diff_list": [
+            "cpu",
+            "memory",
+            "net_upload_rate",
+            "net_download_rate",
+            "1-min_avg_load",
+            "5-min_avg_load",
+            "15-min_avg_load",
+            "temp",
+            "link_quality",
+            "signal_level",
+            "gpu",
+            "iram",
+            "cpu_temp",
+            "gpu_temp",
+            "state",
+            "task",
+            "benchmark",
+            "time_stamp",
+            "time"
+        ],
+        "non_filter_list": [
+            "state",
+            "task",
+            "benchmark",
+            "time_stamp",
+            "time",
+            "cpu_freq"
+        ],
+        "state_non_diff_list": [
+            "cpu_num_",
+            "num_threads_",
+            "memory_percent_"
+        ],
+        "states_list": [
+            "state",
+            "allocated_task"
+        ],
+        "column_name_total_to_allocated_task_dict": {
+            "cpu": "cpu_percent_allocated_task",
+            "cpu_user_time": "cpu_times_user_allocated_task",
+            "cpu_system_time": "cpu_times_system_allocated_task",
+            "cpu_idle_time": "cpu_times_iowait_allocated_task",
+            "memory": "memory_percent_allocated_task",
+            "swap_memory": "memory_full_info_swap_allocated_task",
+            "disk_read_bytes": "io_counters_read_bytes_allocated_task",
+            "disk_write_bytes": "io_counters_write_bytes_allocated_task"
+        }
+    },
+    "hbled_param_dict": {
+        "1": {
+            "neuron_mult": 1,
+            "lr_itr": 0.001,
+            "num_epoch_itr": 10
+        },
+        "2": {
+            "neuron_mult": 1,
+            "lr_itr": 0.0001,
+            "num_epoch_itr": 20
+        },
+        "5": {
+            "neuron_mult": 1,
+            "lr_itr": 1e-05,
+            "num_epoch_itr": 30
+        },
+        "10": {
+            "neuron_mult": 1,
+            "lr_itr": 1e-06,
+            "num_epoch_itr": 30
+        },
+        "15": {
+            "neuron_mult": 1,
+            "lr_itr": 1e-07,
+            "num_epoch_itr": 35
+        },
+        "30": {
+            "neuron_mult": 1,
+            "lr_itr": 1e-08,
+            "num_epoch_itr": 40
+        },
+        "60": {
+            "neuron_mult": 1,
+            "lr_itr": 1e-09,
+            "num_epoch_itr": 45
+        }
+    }
+}
